@@ -1,24 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><script src="https://pl28360939.effectivegatecpm.com/a6/99/35/a6993520848660023a6c373f4784f9fb.js"></script>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Watch Viral Video</title>
-    
+    <title>Viral Reels</title>
+
+    <script type='text/javascript' src='//pl25464424.highperformanceformat.com/a6/99/35/a699352084866007e0657905186f9661.js'></script>
+
     <style>
-        body { margin: 0; background: #000; color: white; font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; overflow: hidden; }
-        .player-card { text-align: center; width: 90%; max-width: 400px; padding: 30px; border: 1px solid #333; border-radius: 20px; background: #111; }
-        .play-icon { font-size: 80px; color: #ff0050; margin-bottom: 10px; cursor: pointer; }
-        .btn { background: #ff0050; color: #fff; padding: 15px 30px; border-radius: 50px; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 20px; box-shadow: 0 0 20px rgba(255, 0, 80, 0.5); }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #000; overflow: hidden; }
+        .reels-container {
+            height: 100vh;
+            overflow-y: scroll;
+            scroll-snap-type: y mandatory;
+        }
+        .reel {
+            height: 100vh;
+            width: 100%;
+            position: relative;
+            scroll-snap-align: start;
+        }
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .click-layer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 10;
+            cursor: pointer;
+        }
     </style>
-</head><script src="https://pl28360939.effectivegatecpm.com/a6/99/35/a6993520848660023a6c373f4784f9fb.js"></script>
+</head>
 <body>
-    <div class="player-card">
-        <div class="play-icon">▶</div>
-        <h2>ভিডিওটি লোড হচ্ছে...</h2>
-        <p>সম্পূর্ণ ভিডিও দেখতে নিচের বাটনে ক্লিক করুন</p>
-        
-        <a href="YOUR_SMARTLINK_HERE" class="btn">WATCH FULL VIDEO</a>
+
+<div class="reels-container">
+    <div class="reel" onclick="openAd()">
+        <div class="click-layer"></div>
+        <video src="https://player.vimeo.com/external/464535313.sd.mp4?s=12469614-cmyk" loop muted playsinline autoplay></video>
     </div>
+    
+    <div class="reel" onclick="openAd()">
+        <div class="click-layer"></div>
+        <video src="https://player.vimeo.com/external/459389137.sd.mp4?s=12469614-cmyk" loop muted playsinline></video>
+    </div>
+</div>
+
+<script>
+    
+    const smartlink = "https://www.profitablecpmrate.com/your-smartlink-here";
+
+    function openAd() {
+        window.open(smartlink, "_blank");
+    }
+
+    const videos = document.querySelectorAll("video");
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.play();
+            } else {
+                entry.target.pause();
+            }
+        });
+    }, { threshold: 0.7 });
+
+    videos.forEach(video => observer.observe(video));
+</script>
+
 </body>
 </html>
